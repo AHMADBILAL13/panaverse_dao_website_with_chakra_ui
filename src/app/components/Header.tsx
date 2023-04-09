@@ -21,11 +21,11 @@ export default function Header() {
             fontSize={18}
             fontWeight="semibold"
           >
-            <Link href="">Home</Link>
-            <Link href="">Syllabus</Link>
-            <Link href="">Explore</Link>
-            <Link href="">About</Link>
-            <Link href="">Contact</Link>
+            <Link href="/">Home</Link>
+            <Link href="/Syllabus">Syllabus</Link>
+            <Link href="/Explore">Explore</Link>
+            <Link href="/About">About</Link>
+            <Link href="/Contact">Contact</Link>
           </Flex>
           <Box display={{ lg: "initial",md:'initial' , base: "none" }}>
             <Button float="right" mt="14px" colorScheme="blackAlpha" size="lg">
