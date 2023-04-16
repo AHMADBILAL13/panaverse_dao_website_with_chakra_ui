@@ -1,12 +1,15 @@
-import { Box, Container, Grid, Heading,SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Container, Divider, Flex, Grid, Heading,SimpleGrid, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 import Logo from '../../../public/panaverse.png'
 import Link from 'next/link'
+import { EmailIcon, PhoneIcon } from '@chakra-ui/icons'
+import { Icon } from "@chakra-ui/react";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <Box bg='gray.700'>
+    <Box bg='gray.700' >
         <Container maxW={1400}>
             <SimpleGrid spacing='20px' py='50px' templateColumns={{sm:'repeat(1, 1fr)', md:'repeat(2, 1fr)' , lg:"repeat(4, 1fr)"}} >
                 <Box>
@@ -18,11 +21,11 @@ export default function Footer() {
                 <Box>
                     <Heading color='gray.200' >Useful Links</Heading>
                     <Grid pt='40px' color='gray.300'>
-                    <Link href='' >Home</Link>
-                    <Link href='' >Syllabus</Link>
-                    <Link href='' >Explore</Link>
-                    <Link href='' >About</Link>
-                    <Link href='' >Contact</Link>
+                    <Link href="/">Home</Link>
+                    <Link href="/Syllabus">Syllabus</Link>
+                    <Link href="/Explore">Explore</Link>
+                    <Link href="/About">About</Link>
+                    <Link href="/Contact">Contact</Link>
                     </Grid>
                 </Box>
                 <Box>
@@ -35,15 +38,22 @@ export default function Footer() {
                     <Link href='' >GitHub</Link>
                     </Grid>
                 </Box>
-                <Box>
+                <Box color='gray.300'>
                     <Heading color='gray.200' >Contact Us</Heading>
-                    <Grid pt='40px' color='gray.300'>
+                    <Flex pt='40px' >
+                    <PhoneIcon my='5px' />
                     <Link href='' >+923211234567</Link>
+                    </Flex>
+                    <Flex>
+                    <EmailIcon my='5px' mr='3px'/>
                     <Link href='' >abc@email.com</Link>
+                    </Flex>
+                    <Flex> 
+                    <Icon as={FaMapMarkerAlt} boxSize={4} mt='4px' mr='3px' />
                     <Link href='' >Karachi</Link>
-                    </Grid>
-                </Box>
-                
+                    </Flex>
+
+                </Box>     
             </SimpleGrid>
         </Container>
     </Box>

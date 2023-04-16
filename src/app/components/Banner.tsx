@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import logo from '../../../public/logo.png'
 import logo2 from '../../../public/logo2.png'
+import gif from '../../../public/animation.gif'
 
 
 
@@ -33,7 +34,7 @@ export default function Banner() {
         <Container maxW={1400}>
             <Flex gap={{lg:'100px',base:'10px'}} display={{lg:'flex',base:'grid'}}>
                 <Box flexBasis='50%'>
-                    <Image src={logo2} alt="image"/>
+                    <Image src={gif} alt="image"/>
                 </Box>
                 <Box flexBasis='50%' pt={{lg:'80px', base:'10px'}} pb={{lg:'0',base:'20px'}}>
                     <Heading size='2xl'>Program of Studies</Heading>

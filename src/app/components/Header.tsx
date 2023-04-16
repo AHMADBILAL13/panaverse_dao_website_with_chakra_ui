@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <Box boxShadow="lg" bg="gray.300">
+    <Box boxShadow="lg" bg="gray.300" position='fixed' zIndex='sticky' >
       <Container maxW={1400}>
         <SimpleGrid templateColumns={{lg:"repeat(3,1fr)",md:'repeat(3,1fr)',base:'repeat(2,1fr)'}}>
           <Box>
