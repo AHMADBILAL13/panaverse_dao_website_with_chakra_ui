@@ -116,7 +116,7 @@ export default function page() {
           >
             <Box flexBasis="50%" m="auto">
             <RevealWrapper origin="left" delay={200} duration={1000} distance='500px' reset={true}>
-              <Image src="/zia.png" alt="Zia Khan" m="auto" />
+              <Image src="/Zia.png" alt="Zia Khan" m="auto" />
             </RevealWrapper>  
             </Box>
             <Box flexBasis="50%" mt="0px">
