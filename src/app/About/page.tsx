@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Home from "../components/Home";import { useState } from "react";
+import Home from "../components/Home";
 import {
   Box,
   Container,
@@ -8,18 +8,11 @@ import {
   Heading,
   Text,
   Image,
- Button,
  Divider
 } from "@chakra-ui/react";
-import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react";
 import Instructor from "../components/Instructor";
+import {RevealList,RevealWrapper} from 'next-reveal'
 
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-} from '@chakra-ui/react'
 
 export default function page() {
   return (
@@ -36,9 +29,12 @@ export default function page() {
             display={{ lg: "flex", base: "gird" }}
           >
             <Box flexBasis="50%" m="auto">
+            <RevealWrapper origin="left" delay={200} duration={1000} distance='500px' reset={true}>
               <Image src="/president.png" alt="President Image" mx="auto" />
+            </RevealWrapper>  
             </Box>
             <Box flexBasis="50%">
+             <RevealList interval={60} delay={500} origin="right" duration={1000} distance='500px' reset={true}> 
               <Heading>Dr Arif Alvi</Heading>
               <Divider borderWidth='thick' borderColor='gray.500' />
               <Text mt={5}>
@@ -67,6 +63,7 @@ export default function page() {
                 of 20th March as World Oral Health Day. He is also an author of
                 a book, theses, and many articles.
               </Text>
+            </RevealList>
             </Box>
           </Flex>
         </Container>
@@ -79,6 +76,7 @@ export default function page() {
             display={{ lg: "flex", base: "gird" }}
           >
             <Box flexBasis="50%">
+            <RevealList interval={60} delay={500} origin="left" duration={1000} distance='500px' reset={true}> 
               <Heading>Panaverse DAO</Heading>
               <Divider borderWidth='thick' borderColor='gray.500' />
               <Text mt={5}>
@@ -99,9 +97,12 @@ export default function page() {
                 of 20th March as World Oral Health Day. He is also an author of
                 a book, theses, and many articles.
               </Text>
+              </RevealList> 
             </Box>
             <Box flexBasis="50%" m="auto">
+            <RevealWrapper origin="right" delay={200} duration={1000} distance='500px' reset={true}>
               <Image src="/bigLogo.png" alt="Panaverse Logo" mx="auto" />
+            </RevealWrapper>  
             </Box>
           </Flex>
         </Container>
@@ -114,9 +115,12 @@ export default function page() {
             display={{ lg: "flex", base: "gird" }}
           >
             <Box flexBasis="50%" m="auto">
-              <Image src="/zia.webp" alt="Zia Khan" m="auto" />
+            <RevealWrapper origin="left" delay={200} duration={1000} distance='500px' reset={true}>
+              <Image src="/zia.png" alt="Zia Khan" m="auto" />
+            </RevealWrapper>  
             </Box>
             <Box flexBasis="50%" mt="0px">
+            <RevealList interval={60} delay={500} origin="right" duration={1000} distance='500px' reset={true}>
               <Heading>Zia Khan</Heading>
               <Divider borderWidth='thick' borderColor='gray.500' />
               <Text mt={5}>
@@ -143,6 +147,7 @@ export default function page() {
                 Panacloud, OpenPD, Datasplash, FreshAir Sensor, Tallyfy,
                 Cloudspot, OnSeen, Unicharts, etc.
               </Text>
+              </RevealList>
             </Box>
           </Flex>
         </Container>

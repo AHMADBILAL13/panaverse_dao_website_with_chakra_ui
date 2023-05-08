@@ -1,8 +1,10 @@
 'use client'
 import React from 'react'
 import Home from '../components/Home'
-import { Box, Center, Container, Divider, Flex, Heading, Text, SkeletonCircle } from '@chakra-ui/react'
+import { Box, Center, Container, Divider, Flex, Heading, Text} from '@chakra-ui/react'
 import { Cards, core } from '../components/database'
+import {RevealList,RevealWrapper} from 'next-reveal'
+
 
 export default function page() {
   return (
@@ -19,6 +21,7 @@ export default function page() {
           <Text textAlign='center' px='130px'>Every participant of the program will start by completing the following three core courses:</Text>
         </Center>
         {/* First # Quarters Boxes */}
+        <RevealList interval={60} delay={300} origin="top" duration={1000} distance='100px' reset={true}>
          <Center>
         <Flex mt='40px' textAlign='center' gap='20px'>
           {core.map((ins)=>( 
@@ -30,6 +33,7 @@ export default function page() {
         ))} 
         </Flex> 
           </Center>
+        </RevealList>  
           <Box my='40px'>
         <Center flexDir='column' >
           <Heading >Specialized Tracks</Heading>
@@ -42,21 +46,27 @@ export default function page() {
       <Container maxW={1400} pb='20px' bgSize='cover' bgAttachment='fixed' bgImage='https://img.freepik.com/free-vector/white-background-with-blue-tech-hexagon_1017-19366.jpg?w=2000'>
         {Cards.map((ins) => (
       <Box key={ins.id}>
+      <RevealList interval={60} delay={300} origin="top" duration={1000} distance='100px' reset={true}>
       <Center my='10px' flexDir='column' >
           <Heading >{ins.heading1}</Heading>
           <Text textAlign='center' px='130px'>{ins.text1}</Text>
         </Center>
+          </RevealList>
         <Center>
         <Flex mt='30px' textAlign='center' gap='20px'>
           <Box pt='25px' p='50px' boxShadow='dark-lg' borderRadius='20px' width='350px' bgColor='white'>
+        <RevealWrapper origin="left" delay={200} duration={1000} distance='500px' reset={true}>
             <Heading>{ins.heading2}</Heading>
             <Divider borderWidth='medium' borderColor='gray.500'/>
             <Text fontWeight='medium' pt='5px'>{ins.text2}</Text>
+          </RevealWrapper>
           </Box>
           <Box pt='25px' p='50px' boxShadow='dark-lg' borderRadius='20px' width='350px' bgColor='white'>
+          <RevealWrapper origin="right" delay={200} duration={1000} distance='500px' reset={true}>
             <Heading>{ins.heading3}</Heading>
             <Divider borderWidth='medium' borderColor='gray.500'/>
             <Text fontWeight='medium' pt='5px'>{ins.text3}</Text>
+          </RevealWrapper>
           </Box>
         </Flex>  
           </Center>

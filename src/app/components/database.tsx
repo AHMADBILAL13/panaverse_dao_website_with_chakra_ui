@@ -2,7 +2,7 @@
 export const data = [
     {
         id:1,
-        src:'/Zia.webp',
+        src:'/Zia.png',
         name:'Zia Khan',
         heading:'Zia Khan',
         text:'Panaverse DAO is a community of Web 3 and Metaverse developers, designers, trainers, startup founders'
