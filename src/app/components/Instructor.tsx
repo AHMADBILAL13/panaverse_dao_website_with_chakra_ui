@@ -11,7 +11,7 @@ export default function Instructor() {
             <Center>
                 <Heading pb='20px'>Our Instructor</Heading>
             </Center>
-            <Flex>
+            <Flex direction={{ base: 'column', md: 'column' ,lg:'row' }}>
                 {data.map((ins) => ( 
                     <Box key={ins.id}>
                     <Center pb='10px'>
